@@ -24,7 +24,7 @@ function TestimonialContainer(props: {
 }) {
     return (
         <article className={"flex gap-6"}>
-            <Image src={props.imageUrl} alt={""} height={500} width={500} className={"w-40 shadow-medium"}/>
+            <Image src={props.imageUrl} alt={""} height={500} width={500} className={"w-40 h-40 shadow-medium"}/>
 
             <div className={"self-center"}>
                 <p className={"mb-4"}>{props.statement}</p>
