@@ -33,13 +33,13 @@ function BlogPostContainer(props: {
     return (
         <article className={"grid gap-6"}>
             <Image src={props.imageUrl} alt={""} height={1500} width={1500} className={"max-h-96 object-cover"}/>
-            <p>{props.author} - {date.toDateString()}</p>
+            <p className={"text-secondary"}>{props.author} - {date.toDateString()}</p>
 
             <h3 className={"text-2xl font-bold"}>{props.title}</h3>
             
             <p>{props.description}</p>
 
-            <a href={props.sourceUrl} target={"_blank"} rel={"noreferrer"}>Read more</a>
+            <a href={props.sourceUrl} target={"_blank"} rel={"noreferrer"} className={"text-primary underline"}>Read more</a>
         </article>
     )
 }

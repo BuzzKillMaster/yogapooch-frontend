@@ -22,8 +22,8 @@ function StatisticsContainer(props: {
     description: string
 }) {
     return (
-        <article className={"border-l-4 pl-6"}>
-            <p className={"text-5xl font-bold mb-4"}>{props.statistic}</p>
+        <article className={"border-l-4 border-secondary pl-6"}>
+            <p className={"text-5xl font-bold mb-4 text-primary"}>{props.statistic}</p>
             <p>{props.description}</p>
         </article>
     )

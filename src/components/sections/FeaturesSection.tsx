@@ -45,7 +45,7 @@ function FeatureContainer(props: {
 }) {
     return (
         <article>
-            <div className={"bg-gray-200 w-fit p-4 text-2xl"}>
+            <div className={"bg-primary text-alternative w-fit p-4 text-2xl"}>
                 {props.children}
             </div>
 

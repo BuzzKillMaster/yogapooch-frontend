@@ -18,7 +18,7 @@ const lexend = Lexend({
 
 export default function Home() {
     return (
-        <div className={lexend.className}>
+        <div className={lexend.className + " bg-default text-default"}>
             <PageHeader />
 
             <main>

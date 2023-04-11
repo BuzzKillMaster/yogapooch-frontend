@@ -10,9 +10,9 @@ export default function PageFooter() {
                 </div>
 
                 <div className={"grid md:justify-items-end"}>
-                    <h3 className={"mb-4"}>Lorem ipsum dolor sit amet</h3>
+                    <h3 className={"mb-4 text-secondary"}>Lorem ipsum dolor sit amet</h3>
 
-                    <div className={"flex gap-4 text-2xl"}>
+                    <div className={"flex gap-4 text-2xl text-primary"}>
                         <FaLinkedin className={"cursor-pointer"}/>
                         <FaFacebook className={"cursor-pointer"}/>
                     </div>

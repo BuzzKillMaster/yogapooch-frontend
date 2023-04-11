@@ -25,11 +25,11 @@ export default function ContactSection() {
                     </div>
 
 
-                    <div className={"grid gap-8 p-12 bg-gray-200"}>
+                    <div className={"grid gap-8 p-12 bg-alternative"}>
                         <h3 className={"text-4xl font-bold"}>Lorem ipsum</h3>
                         <p> Aliquam corporis cupiditate dolorum esse est et impedit itaque nobis numquam officia rerum, tenetur?</p>
 
-                        <div className={"bg-gray-500 h-2"}></div>
+                        <div className={"bg-secondary h-1"}></div>
 
                         <h4 className={"text-2xl font-bold"}>Lorem ipsum dolor sit amet</h4>
                         <p>Cupiditate dicta ea error explicabo magnam minus molestias nihil perferendis qui repellat, similique soluta unde voluptate.</p>
@@ -43,9 +43,9 @@ export default function ContactSection() {
                             <MinorBenefitContainer title={"Lorem ipsum dolor"}/>
                         </div>
 
-                        <div className={"bg-gray-500 h-2"}></div>
+                        <div className={"bg-secondary h-1"}></div>
 
-                        <button className={"bg-gray-500 py-4"}>Consectetur adipiscing elit</button>
+                        <button className={"bg-primary text-alternative py-4"}>Consectetur adipiscing elit</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ function MinorBenefitContainer(props: {
 }) {
     return (
         <div className={"flex items-center gap-4"}>
-            <BiCheck className={"text-2xl"}/>
+            <BiCheck className={"text-2xl text-primary"}/>
             <p>{props.title}</p>
         </div>
     )
@@ -71,7 +71,7 @@ function KeyBenefitContainer(props: {
 }) {
     return (
         <article className={"flex gap-6"}>
-            <div className={"bg-gray-200 h-max p-4 text-2xl"}>
+            <div className={"bg-primary text-alternative h-max p-4 text-2xl"}>
                 {props.children}
             </div>
 

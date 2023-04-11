@@ -31,16 +31,16 @@ function TeamMemberContainer(props: {
         <article className={"grid gap-6"}>
             <Image src={"https://fakeimg.pl/500"} alt={""} height={500} width={500} className={"w-40"}/>
 
-            <small >{props.title}</small>
+            <small className={"text-secondary"}>{props.title}</small>
             <h3 className={"text-2xl font-bold"}>{props.name}</h3>
             <p>{props.education}</p>
 
-            <div className={"flex items-center gap-4"}>
+            <div className={"flex items-center gap-4 text-primary"}>
                 <a href={props.linkedInUrl} target={"_blank"} rel={"noreferrer"} className={"text-2xl"}>
                     <FaLinkedin/>
                 </a>
 
-                <a href={"mailto:" + props.email}>{props.email}</a>
+                <a href={"mailto:" + props.email} className={"underline"}>{props.email}</a>
             </div>
         </article>
     )

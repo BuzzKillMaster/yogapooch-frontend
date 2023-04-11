@@ -10,4 +10,40 @@
     .container {
         @apply mx-auto px-4 max-w-7xl
     }
+
+    .bg-default {
+        @apply bg-neutral-50 dark:bg-slate-800
+    }
+
+    .bg-alternative {
+        @apply bg-neutral-200 dark:bg-slate-700
+    }
+
+    .bg-primary {
+        @apply bg-green-700 dark:bg-green-400
+    }
+
+    .bg-secondary {
+        @apply bg-pink-700 dark:bg-pink-400
+    }
+
+    .text-default {
+        @apply text-neutral-950 dark:text-neutral-50
+    }
+
+    .text-alternative {
+        @apply text-neutral-50 dark:text-neutral-950
+    }
+
+    .text-primary {
+        @apply text-green-700 dark:text-green-400
+    }
+
+    .text-secondary {
+        @apply text-pink-700 dark:text-pink-400
+    }
+
+    .border-secondary {
+        @apply border-pink-700 dark:border-pink-400
+    }
 }
