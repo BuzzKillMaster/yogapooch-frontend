@@ -42,10 +42,6 @@
     .text-secondary {
         @apply text-pink-700 dark:text-pink-400
     }
-
-    .border-secondary {
-        @apply border-pink-700 dark:border-pink-400
-    }
 }
 
 .shadow-small {
