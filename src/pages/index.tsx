@@ -8,6 +8,7 @@ import BusinessPartnersSection from "@/components/sections/BusinessPartnersSecti
 import NewsArticlesSection from "@/components/sections/NewsArticlesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeamSection from "@/components/sections/TeamSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 const lexend = Lexend({
     subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function Home() {
                 <BusinessPartnersSection/>
                 <NewsArticlesSection/>
                 <TestimonialsSection/>
+                <ContactSection/>
                 <TeamSection/>
             </main>
 
