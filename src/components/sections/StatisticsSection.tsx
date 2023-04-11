@@ -22,8 +22,9 @@ function StatisticsContainer(props: {
     description: string
 }) {
     return (
-        <article className={"flex gap-4"}>
+        <article className={"flex gap-6"}>
             <div className={"h-full w-1 bg-secondary shadow-small"}></div>
+
             <div>
                 <p className={"text-5xl font-bold mb-4 text-primary"}>{props.statistic}</p>
                 <p>{props.description}</p>

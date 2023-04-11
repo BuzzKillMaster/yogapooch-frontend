@@ -29,7 +29,7 @@ function TestimonialContainer(props: {
             <div className={"self-center"}>
                 <p className={"mb-4"}>{props.statement}</p>
 
-                <p className={"text-secondary"}>{props.name}, {props.title}</p>
+                <p className={"text-sm text-secondary font-bold"}>{props.name}, {props.title}</p>
             </div>
         </article>
     )
