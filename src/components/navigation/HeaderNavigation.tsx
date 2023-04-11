@@ -2,7 +2,7 @@ import NavItem from "@/components/navigation/NavItem";
 
 export default function HeaderNavigation() {
     return (
-        <nav>
+        <nav className={"hidden lg:block"}>
             <ul className={"flex items-center gap-8"}>
                 <NavItem title={"Home"} active={true}/>
                 <NavItem title={"Technology"} active={false}/>

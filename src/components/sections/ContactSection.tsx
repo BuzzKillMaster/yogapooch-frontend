@@ -9,7 +9,7 @@ export default function ContactSection() {
             <div className="container">
                 <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
 
-                <div className="grid grid-cols-2 items-center gap-20">
+                <div className="grid lg:grid-cols-2 items-center gap-20">
                     <div className={"grid gap-12"}>
                         <KeyBenefitContainer title={"Lorem ipsum dolor sit amet"} description={"Ad aut dolore dolorem, dolorum harum illum labore pariatur porro possimus sed sit, vel? Aliquid aut distinctio exercitationem nostrum odio, sint unde!"}>
                             <HiThumbUp/>
@@ -34,7 +34,7 @@ export default function ContactSection() {
                         <h4 className={"text-2xl font-bold"}>Lorem ipsum dolor sit amet</h4>
                         <p>Cupiditate dicta ea error explicabo magnam minus molestias nihil perferendis qui repellat, similique soluta unde voluptate.</p>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid sm:grid-cols-2 gap-4">
                             <MinorBenefitContainer title={"Lorem ipsum dolor"}/>
                             <MinorBenefitContainer title={"Lorem ipsum dolor"}/>
                             <MinorBenefitContainer title={"Lorem ipsum dolor"}/>

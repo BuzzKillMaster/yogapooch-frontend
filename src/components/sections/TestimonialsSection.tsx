@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
             <div className={"container"}>
                 <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
             
-                <div className="grid grid-cols-2 gap-12">
+                <div className="grid lg:grid-cols-2 gap-12">
                     <TestimonialContainer imageUrl={"https://fakeimg.pl/500"} name={"Jane Doe"} title={"CEO of Some Company"} statement={"Animi at blanditiis, dolorem, eaque excepturi, labore minima minus molestiae mollitia omnis quibusdam saepe velit voluptatem? Aut excepturi ipsam labore quia voluptatem."}/>
                     <TestimonialContainer imageUrl={"https://fakeimg.pl/500"} name={"John Doe"} title={"CEO of Some Company"} statement={"Animi at blanditiis, dolorem, eaque excepturi, labore minima minus molestiae mollitia omnis quibusdam saepe velit voluptatem? Aut excepturi ipsam labore quia voluptatem."}/>
                 </div>

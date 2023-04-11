@@ -7,7 +7,7 @@ export default function NewsArticlesSection() {
             <div className={"container"}>
                 <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
 
-                <div className="grid grid-cols-3 gap-12">
+                <div className="grid md:grid-cols-3 gap-4 lg:gap-12">
                     <NewsArticleContainer sourceName={"Source Name"} title={"Lorem ipsum dolor sit amet"} description={"Aliquid autem culpa deleniti enim est illum ipsa ipsam, iusto laboriosam nobis nulla odio odit, pariatur quaerat quasi quis reprehenderit sequi vel?"} sourceUrl={"https://google.com"}/>
                     <NewsArticleContainer sourceName={"Source Name"} title={"Lorem ipsum dolor sit amet"} description={"Aliquid autem culpa deleniti enim est illum ipsa ipsam, iusto laboriosam nobis nulla odio odit, pariatur quaerat quasi quis reprehenderit sequi vel?"} sourceUrl={"https://google.com"}/>
                     <NewsArticleContainer sourceName={"Source Name"} title={"Lorem ipsum dolor sit amet"} description={"Aliquid autem culpa deleniti enim est illum ipsa ipsam, iusto laboriosam nobis nulla odio odit, pariatur quaerat quasi quis reprehenderit sequi vel?"} sourceUrl={"https://google.com"}/>

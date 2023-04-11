@@ -8,7 +8,7 @@ export default function TeamSection() {
             <div className="container">
                 <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
 
-                <div className="grid grid-cols-4 gap-12">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
                     <TeamMemberContainer imageUrl={"https://fakeimg.pl/500"} name={"John A. Doe"} title={"CEO"} education={"Cand.Polyt. - Product Development and Innovation"} linkedInUrl={"https://www.linkedin.com"} email={"johndoe@example.com"}/>
                     <TeamMemberContainer imageUrl={"https://fakeimg.pl/500"} name={"Jane B. Doe"} title={"CTO"} education={"Cand.Polyt. - Product Development and Innovation"} linkedInUrl={"https://www.linkedin.com"} email={"janedoe@example.com"}/>
                     <TeamMemberContainer imageUrl={"https://fakeimg.pl/500"} name={"John A. Doe"} title={"CEO"} education={"Cand.Polyt. - Product Development and Innovation"} linkedInUrl={"https://www.linkedin.com"} email={"johndoe@example.com"}/>
