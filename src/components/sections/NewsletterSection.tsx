@@ -10,7 +10,7 @@ export default function NewsletterSection() {
 
                     <div className={"flex mb-4 shadow-medium"}>
                         <input type="email" placeholder={"Lorem ipsum dolor sit amet"} className={"bg-alternative p-4 grow"}/>
-                        <button className={"bg-primary text-alternative text-alternative px-6 font-bold"}>Lorem ipsum</button>
+                        <button className={"bg-primary text-alternative px-6 font-bold"}>Lorem ipsum</button>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet</p>
