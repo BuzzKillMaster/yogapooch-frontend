@@ -11,14 +11,14 @@ export default function LandingPageHero() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolor dolorum enim facilis harum, illo ipsam laboriosam, nam necessitatibus odit officia quam tempora temporibus tenetur ullam, voluptates voluptatibus. Esse, iusto.</p>
 
                     <div className={"my-8"}>
-                        <button className={"bg-primary text-alternative py-4 px-6 mr-4"}>Lorem ipsum</button>
-                        <button className={"bg-alternative py-4 px-6"}>Dolor sit amet</button>
+                        <button className={"bg-primary text-alternative py-4 px-6 mr-4 shadow-medium"}>Lorem ipsum</button>
+                        <button className={"bg-alternative py-4 px-6 shadow-medium"}>Dolor sit amet</button>
                     </div>
 
                     <p>Lorem ipsum dolor sit amet? <span className={"cursor-pointer text-primary underline"}>Consectetur</span></p>
                 </div>
 
-                <Image src={"https://fakeimg.pl/1000"} alt={""} height={1000} width={1000} className={"hidden lg:block"}/>
+                <Image src={"https://fakeimg.pl/1000"} alt={""} height={1000} width={1000} className={"hidden lg:block shadow-large"}/>
             </div>
         </section>
     )
