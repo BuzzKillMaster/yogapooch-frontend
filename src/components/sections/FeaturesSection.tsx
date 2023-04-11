@@ -44,13 +44,13 @@ function FeatureContainer(props: {
     children: ReactNode
 }) {
     return (
-        <div>
+        <article>
             <div className={"bg-gray-200 w-fit p-4 text-2xl"}>
                 {props.children}
             </div>
 
             <h3 className={"text-2xl font-bold mb-4 mt-6"}>{props.title}</h3>
             <p>{props.description}</p>
-        </div>
+        </article>
     )
 }
