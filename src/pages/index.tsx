@@ -4,6 +4,7 @@ import {Lexend} from "next/font/google";
 import StatisticsSection from "@/components/sections/StatisticsSection";
 import PageFooter from "@/components/PageFooter";
 import FeaturesSection from "@/components/sections/FeaturesSection";
+import BusinessPartnersSection from "@/components/sections/BusinessPartnersSection";
 
 const lexend = Lexend({
     subsets: ["latin"],
@@ -18,6 +19,7 @@ export default function Home() {
                 <LandingPageHero/>
                 <StatisticsSection/>
                 <FeaturesSection/>
+                <BusinessPartnersSection/>
             </main>
 
             <PageFooter/>
