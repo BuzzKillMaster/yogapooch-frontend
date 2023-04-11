@@ -25,7 +25,7 @@ export default function ContactSection() {
                     </div>
 
 
-                    <div className={"p-8 md:p-10 bg-alternative shadow-large"}>
+                    <div className={"py-10 px-8 md:px-10 bg-alternative shadow-large"}>
                         <h3 className={"text-4xl font-bold mb-6"}>Lorem ipsum</h3>
                         <p> Aliquam corporis cupiditate dolorum esse est et impedit itaque nobis numquam officia rerum, tenetur?</p>
 
