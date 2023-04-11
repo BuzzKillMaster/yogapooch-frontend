@@ -24,7 +24,7 @@ function NewsArticleContainer(props: {
     sourceUrl: string
 }) {
     return (
-        <article className={"flex flex-col gap-6"}>
+        <article className={"grid gap-6"}>
             <Image src={"https://fakeimg.pl/500"} alt={""} height={500} width={500}/>
             <small>{props.sourceName}</small>
             <h3 className={"text-2xl font-bold"}>{props.title}</h3>
