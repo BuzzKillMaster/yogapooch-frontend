@@ -12,8 +12,12 @@ export default function Home() {
     return (
         <div className={lexend.className}>
             <PageHeader />
-            <LandingPageHero/>
-            <StatisticsSection/>
+
+            <main>
+                <LandingPageHero/>
+                <StatisticsSection/>
+            </main>
+
             <PageFooter/>
         </div>
     )
