@@ -8,6 +8,9 @@ const nextConfig = {
             "127.0.0.1"
         ],
     },
+    experimental: {
+        appDir: true,
+    },
 }
 
 module.exports = nextConfig
