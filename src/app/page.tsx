@@ -1,6 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import {Lexend} from "next/font/google";
-import StatisticsSection from "@/components/sections/StatisticsSection";
+import StatisticsSection from "@/app/components/sections/StatisticsSection";
 import PageFooter from "@/components/PageFooter";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import BusinessPartnersSection from "@/components/sections/BusinessPartnersSection";
@@ -24,6 +24,7 @@ export default async function Home() {
             <main>
                 {/* @ts-expect-error Async Server Component */}
                 <LandingPageHero/>
+                {/* @ts-expect-error Async Server Component */}
                 <StatisticsSection/>
                 <FeaturesSection/>
                 <BusinessPartnersSection/>
