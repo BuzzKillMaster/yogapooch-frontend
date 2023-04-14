@@ -10,7 +10,7 @@ export default function PageFooter() {
                 </div>
 
                 <div className={"grid md:justify-items-end"}>
-                    <h3 className={"mb-6 text-sm text-secondary font-bold uppercase"}>Lorem ipsum dolor sit amet</h3>
+                    <h3 className={"mb-6 text-sm text-secondary font-bold uppercase"}>Sniff our butts on social media</h3>
 
                     <div className={"flex gap-4 text-2xl text-primary"}>
                         <FaLinkedin className={"cursor-pointer"}/>
