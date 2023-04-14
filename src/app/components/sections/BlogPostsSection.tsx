@@ -10,6 +10,7 @@ type ComponentProps = LandingPageSharedProps & {
         description: string
         author: string
         image: string
+        createdAt: string
     }[]
 }
 
@@ -39,10 +40,6 @@ export default async function BlogPostsSection() {
                     {props.posts.slice(1).map((post, index) => (
                         <BlogPostContainer key={index} imageUrl={post.image} author={post.author} title={post.title} description={enforceCharacterLimit(post.description, 200)} sourceUrl={"https://google.com"}/>
                     ))}
-
-                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
-                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
-                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
                 </div>
             </div>
         </section>
