@@ -3,11 +3,28 @@ import Image from "next/image";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 import fetchComponentData from "@/utility/fetchComponentData";
 
-type ComponentProps = LandingPageSharedProps
+type ComponentProps = LandingPageSharedProps & {
+    posts: {
+        title: string
+        description: string
+        author: string
+        image: string
+    }[]
+}
 
 export default async function BlogPostsSection() {
     const {data: {attributes}} = await fetchComponentData("landing-page-blog-posts-section")
-    const props: ComponentProps = attributes
+    const {data} = await fetchComponentData("blog-posts", "pagination[limit]=4&populate=*")
+
+    const props: ComponentProps = {
+        ...attributes,
+        posts: data.map((post: any) => {
+           return {
+               ...post.attributes,
+                image: "http://127.0.0.1:1337" + post.attributes.image.data.attributes.url
+           }
+        })
+    }
 
     return (
         <section>
@@ -16,11 +33,15 @@ export default async function BlogPostsSection() {
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-12">
                     <div className={"lg:col-span-3"}>
-                        <BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>
+                        <BlogPostContainer imageUrl={props.posts[0].image} author={props.posts[0].author} title={props.posts[0].title} description={props.posts[0].description} sourceUrl={"https://google.com"}/>
                     </div>
-                    <BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>
-                    <BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>
-                    <BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>
+                    {props.posts.slice(1).map((post, index) => (
+                        <BlogPostContainer key={index} imageUrl={post.image} author={post.author} title={post.title} description={post.description} sourceUrl={"https://google.com"}/>
+                    ))}
+
+                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
+                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
+                    {/*<BlogPostContainer imageUrl={"https://fakeimg.pl/1500"} author={"Lorem ipsum"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, nisl eget ultricies tincidunt, nisl nisl aliquet nisl, eget aliquet nisl nisl eget nisl."} sourceUrl={"https://google.com"}/>*/}
                 </div>
             </div>
         </section>
