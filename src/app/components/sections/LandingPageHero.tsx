@@ -1,5 +1,11 @@
 import Image from "next/image";
-import LandingPageHeroProps from "@/types/LandingPageHeroProps";
+
+type ComponentProps = {
+    heading: string
+    subheading: string
+    description: string
+    image: string
+}
 
 export default async function LandingPageHero() {
     const response = await fetch("http://127.0.0.1:1337/api/landing-page-hero?populate=*", {
@@ -12,7 +18,7 @@ export default async function LandingPageHero() {
     const data = await response.json()
     const {data: {attributes}} = data
 
-    const props: LandingPageHeroProps = {
+    const props: ComponentProps = {
         ...attributes,
         image: "http://127.0.0.1:1337" + attributes.image.data.attributes.url
     }
