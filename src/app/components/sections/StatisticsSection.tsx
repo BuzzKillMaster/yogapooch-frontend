@@ -2,12 +2,14 @@ import SectionHeading from "@/components/sections/partials/SectionHeading";
 import fetchComponentData from "@/utility/fetchComponentData";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 
+type Statistic = {
+    statistic: string
+    description: string
+}
+
 type ComponentProps = LandingPageSharedProps & {
     image: string
-    statistics: {
-        statistic: string
-        description: string
-    }[]
+    statistics: Statistic[]
 }
 
 export default async function StatisticsSection() {
@@ -21,7 +23,7 @@ export default async function StatisticsSection() {
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {props.statistics.map((statistic, index) => (
-                        <StatisticsContainer key={index} statistic={statistic.statistic} description={statistic.description}/>
+                        <StatisticsContainer key={index} {...statistic}/>
                     ))}
                 </div>
             </div>
@@ -29,10 +31,7 @@ export default async function StatisticsSection() {
     )
 }
 
-function StatisticsContainer(props: {
-    statistic: string
-    description: string
-}) {
+function StatisticsContainer(props: Statistic) {
     return (
         <article className={"flex gap-6"}>
             <div className={"h-full w-1 bg-secondary shadow-small"}></div>

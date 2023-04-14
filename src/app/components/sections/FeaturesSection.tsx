@@ -2,17 +2,18 @@ import SectionHeading from "@/components/sections/partials/SectionHeading";
 import {HiThumbUp} from "react-icons/hi";
 import fetchComponentData from "@/utility/fetchComponentData";
 
+type Feature = {
+    title: string
+    description: string
+}
+
 type ComponentProps = {
     heading: string
     subheading: string
     description: string
     image: string
-    features: {
-        title: string
-        description: string
-    }[]
+    features: Feature[]
 }
-
 
 export default async function FeaturesSection() {
     const {data: {attributes}} = await fetchComponentData("landing-page-features-section")
@@ -25,7 +26,7 @@ export default async function FeaturesSection() {
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
                     {props.features.map((feature, index) => (
-                        <FeatureContainer key={index} title={feature.title} description={feature.description}/>
+                        <FeatureContainer key={index} {...feature}/>
                     ))}
                 </div>
             </div>
@@ -33,10 +34,7 @@ export default async function FeaturesSection() {
     )
 }
 
-function FeatureContainer(props: {
-    title: string
-    description: string
-}) {
+function FeatureContainer(props: Feature) {
     return (
         <article>
             <div className={"bg-primary text-alternative w-fit p-4 text-2xl shadow-medium"}>

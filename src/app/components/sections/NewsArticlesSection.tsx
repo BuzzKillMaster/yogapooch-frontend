@@ -4,14 +4,16 @@ import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 import fetchComponentData from "@/utility/fetchComponentData";
 import enforceCharacterLimit from "@/utility/enforceCharacterLimit";
 
+type Article = {
+    image: string
+    source: string
+    title: string
+    description: string
+    destination: string
+}
+
 type ComponentProps = LandingPageSharedProps & {
-    articles: {
-        image: string
-        source: string
-        title: string
-        description: string
-        destination: string
-    }[]
+    articles: Article[]
 }
 
 export default async function NewsArticlesSection() {
@@ -34,7 +36,7 @@ export default async function NewsArticlesSection() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {props.articles.map((article, index) => (
-                        <NewsArticleContainer key={index} imageUrl={article.image} sourceName={article.source} title={article.title} description={enforceCharacterLimit(article.description, 200)} sourceUrl={article.destination}/>
+                        <NewsArticleContainer key={index} {...article} description={enforceCharacterLimit(article.description, 200)}/>
                     ))}
                 </div>
             </div>
@@ -42,20 +44,14 @@ export default async function NewsArticlesSection() {
     )
 }
 
-function NewsArticleContainer(props: {
-    imageUrl: string
-    sourceName: string
-    title: string
-    description: string
-    sourceUrl: string
-}) {
+function NewsArticleContainer(props: Article) {
     return (
         <article>
-            <Image src={props.imageUrl} alt={""} height={500} width={500} className={"shadow-medium aspect-[4/3] object-cover"}/>
-            <small className={"text-sm text-secondary font-bold mt-8 inline-block"}>{props.sourceName}</small>
+            <Image src={props.image} alt={""} height={500} width={500} className={"shadow-medium aspect-[4/3] object-cover"}/>
+            <small className={"text-sm text-secondary font-bold mt-8 inline-block"}>{props.source}</small>
             <h3 className={"text-xl font-bold my-4"}>{props.title}</h3>
             <p className={"mb-6"}>{props.description}</p>
-            <a href={props.sourceUrl} target={"_blank"} rel={"noreferrer"} className={"underline text-primary"}>Read more</a>
+            <a href={props.destination} target={"_blank"} rel={"noreferrer"} className={"underline text-primary"}>Read more</a>
         </article>
     )
 }

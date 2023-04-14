@@ -3,13 +3,15 @@ import Image from "next/image";
 import fetchComponentData from "@/utility/fetchComponentData";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 
+type Testimonial = {
+    image: string
+    name: string
+    title: string
+    description: string
+}
+
 type ComponentProps = LandingPageSharedProps & {
-    testimonials: {
-        image: string
-        name: string
-        title: string
-        description: string
-    }[]
+    testimonials: Testimonial[]
 }
 
 export default async function TestimonialsSection() {
@@ -31,7 +33,7 @@ export default async function TestimonialsSection() {
             
                 <div className="grid lg:grid-cols-2 gap-12">
                     {props.testimonials.map((testimonial, index) => (
-                        <TestimonialContainer key={index} imageUrl={testimonial.image} name={testimonial.name} title={testimonial.title} statement={testimonial.description}/>
+                        <TestimonialContainer key={index} {...testimonial}/>
                     ))}
                 </div>
             </div>
@@ -39,18 +41,13 @@ export default async function TestimonialsSection() {
     )
 }
 
-function TestimonialContainer(props: {
-    imageUrl: string
-    name: string
-    title: string
-    statement: string
-}) {
+function TestimonialContainer(props: Testimonial) {
     return (
         <article className={"flex gap-6"}>
-            <Image src={props.imageUrl} alt={""} height={500} width={500} className={"w-40 h-40 shadow-medium aspect-square object-cover"}/>
+            <Image src={props.image} alt={""} height={500} width={500} className={"w-40 h-40 shadow-medium aspect-square object-cover"}/>
 
             <div className={"self-center"}>
-                <p className={"mb-4"}>{props.statement}</p>
+                <p className={"mb-4"}>{props.description}</p>
 
                 <p className={"text-sm text-secondary font-bold"}>{props.name}, {props.title}</p>
             </div>
