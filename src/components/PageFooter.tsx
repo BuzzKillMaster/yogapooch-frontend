@@ -5,8 +5,8 @@ export default function PageFooter() {
         <footer className={"py-20"}>
             <div className="container flex flex-col md:flex-row justify-between gap-6">
                 <div>
-                    <h2 className={"text-4xl font-bold uppercase mb-6"}>Hydrovertic</h2>
-                    <p>Copyright © 2023 Hydrovertic. All rights reserved.</p>
+                    <h2 className={"text-4xl font-bold uppercase mb-6"}>Yogapooch</h2>
+                    <p>Copyright © 2023 Yogapooch. All rights reserved.</p>
                 </div>
 
                 <div className={"grid md:justify-items-end"}>
