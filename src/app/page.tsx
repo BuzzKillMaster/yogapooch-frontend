@@ -3,7 +3,7 @@ import {Lexend} from "next/font/google";
 import StatisticsSection from "@/app/components/sections/StatisticsSection";
 import PageFooter from "@/components/PageFooter";
 import FeaturesSection from "@/app/components/sections/FeaturesSection";
-import BusinessPartnersSection from "@/components/sections/BusinessPartnersSection";
+import BusinessPartnersSection from "@/app/components/sections/BusinessPartnersSection";
 import NewsArticlesSection from "@/components/sections/NewsArticlesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import TeamSection from "@/components/sections/TeamSection";
@@ -28,6 +28,7 @@ export default async function Home() {
                 <StatisticsSection/>
                 {/* @ts-expect-error Async Server Component */}
                 <FeaturesSection/>
+                {/* @ts-expect-error Async Server Component */}
                 <BusinessPartnersSection/>
                 <NewsArticlesSection/>
                 <TestimonialsSection/>
