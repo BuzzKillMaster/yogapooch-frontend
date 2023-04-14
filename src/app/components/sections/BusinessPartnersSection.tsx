@@ -24,7 +24,7 @@ export default async function BusinessPartnersSection() {
             <div className={"container"}>
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-14">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-14 items-center">
                     {props.partners.map((partner, index) => (
                         <Image key={index} src={partner} alt={""} height={1000} width={1000}/>
                     ))}
