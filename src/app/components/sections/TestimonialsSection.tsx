@@ -24,22 +24,15 @@ export default async function TestimonialsSection() {
             }
         })
     }
-
-    console.log(props)
-
     return (
         <section>
             <div className={"container"}>
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
             
                 <div className="grid lg:grid-cols-2 gap-12">
-
                     {props.testimonials.map((testimonial, index) => (
                         <TestimonialContainer key={index} imageUrl={testimonial.image} name={testimonial.name} title={testimonial.title} statement={testimonial.description}/>
                     ))}
-
-                    {/*<TestimonialContainer imageUrl={"https://fakeimg.pl/500"} name={"Jane Doe"} title={"CEO of Some Company"} statement={"Animi at blanditiis, dolorem, eaque excepturi, labore minima minus molestiae mollitia omnis quibusdam saepe velit voluptatem? Aut excepturi ipsam labore quia voluptatem."}/>*/}
-                    {/*<TestimonialContainer imageUrl={"https://fakeimg.pl/500"} name={"John Doe"} title={"CEO of Some Company"} statement={"Animi at blanditiis, dolorem, eaque excepturi, labore minima minus molestiae mollitia omnis quibusdam saepe velit voluptatem? Aut excepturi ipsam labore quia voluptatem."}/>*/}
                 </div>
             </div>
         </section>
