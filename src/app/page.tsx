@@ -5,7 +5,7 @@ import PageFooter from "@/components/PageFooter";
 import FeaturesSection from "@/app/components/sections/FeaturesSection";
 import BusinessPartnersSection from "@/app/components/sections/BusinessPartnersSection";
 import NewsArticlesSection from "@/app/components/sections/NewsArticlesSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import TestimonialsSection from "@/app/components/sections/TestimonialsSection";
 import TeamSection from "@/components/sections/TeamSection";
 import ContactSection from "@/components/sections/ContactSection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
@@ -32,6 +32,7 @@ export default async function Home() {
                 <BusinessPartnersSection/>
                 {/* @ts-expect-error Async Server Component */}
                 <NewsArticlesSection/>
+                {/* @ts-expect-error Async Server Component */}
                 <TestimonialsSection/>
                 <ContactSection/>
                 <TeamSection/>
