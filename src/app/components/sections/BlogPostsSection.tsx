@@ -1,11 +1,18 @@
 import SectionHeading from "@/components/sections/partials/SectionHeading";
 import Image from "next/image";
+import LandingPageSharedProps from "@/types/LandingPageSharedProps";
+import fetchComponentData from "@/utility/fetchComponentData";
 
-export default function BlogPostsSection() {
+type ComponentProps = LandingPageSharedProps
+
+export default async function BlogPostsSection() {
+    const {data: {attributes}} = await fetchComponentData("landing-page-blog-posts-section")
+    const props: ComponentProps = attributes
+
     return (
         <section>
             <div className="container">
-                <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
+                <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-12">
                     <div className={"lg:col-span-3"}>

@@ -9,7 +9,7 @@ import TestimonialsSection from "@/app/components/sections/TestimonialsSection";
 import TeamSection from "@/app/components/sections/TeamSection";
 import ContactSection from "@/components/sections/ContactSection";
 import NewsletterSection from "@/components/sections/NewsletterSection";
-import BlogPostsSection from "@/components/sections/BlogPostsSection";
+import BlogPostsSection from "@/app/components/sections/BlogPostsSection";
 import LandingPageHero from "@/app/components/sections/LandingPageHero";
 
 const lexend = Lexend({
@@ -37,6 +37,7 @@ export default async function Home() {
                 <ContactSection/>
                 {/* @ts-expect-error Async Server Component */}
                 <TeamSection/>
+                {/* @ts-expect-error Async Server Component */}
                 <BlogPostsSection/>
                 <NewsletterSection/>
             </main>
