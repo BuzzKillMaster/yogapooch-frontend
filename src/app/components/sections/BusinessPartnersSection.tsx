@@ -10,12 +10,11 @@ type ComponentProps = LandingPageSharedProps & {
 }
 
 export default async function BusinessPartnersSection() {
-    const {data: {attributes}} = await fetchComponentData("landing-page-business-partners-section")
-    const partners = attributes.partners.data.map((partner: any) => "http://127.0.0.1:1337" + partner.attributes.url)
+    const {data: {attributes}} = await fetchComponentData("landing-page-business-partners-section", "populate[partners][populate][image]=*")
 
     const props: ComponentProps = {
         ...attributes,
-        partners
+        partners: attributes.partners.map((partner: any) => "http://127.0.0.1:1337" + partner.image.data.attributes.url)
     }
 
 
