@@ -18,8 +18,6 @@ export default async function FeaturesSection() {
     const {data: {attributes}} = await fetchComponentData("landing-page-features-section")
     const props: ComponentProps = attributes
 
-    console.log(props)
-
     return (
         <section>
             <div className="container">
