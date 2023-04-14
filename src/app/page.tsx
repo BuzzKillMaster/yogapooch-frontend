@@ -8,7 +8,7 @@ import NewsArticlesSection from "@/app/components/sections/NewsArticlesSection";
 import TestimonialsSection from "@/app/components/sections/TestimonialsSection";
 import TeamSection from "@/app/components/sections/TeamSection";
 import ContactSection from "@/components/sections/ContactSection";
-import NewsletterSection from "@/components/sections/NewsletterSection";
+import NewsletterSection from "@/app/components/sections/NewsletterSection";
 import BlogPostsSection from "@/app/components/sections/BlogPostsSection";
 import LandingPageHero from "@/app/components/sections/LandingPageHero";
 
@@ -39,6 +39,7 @@ export default async function Home() {
                 <TeamSection/>
                 {/* @ts-expect-error Async Server Component */}
                 <BlogPostsSection/>
+                {/* @ts-expect-error Async Server Component */}
                 <NewsletterSection/>
             </main>
 
