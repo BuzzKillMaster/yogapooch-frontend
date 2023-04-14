@@ -28,8 +28,6 @@ export default async function TeamSection() {
         })
     }
 
-    console.log(props)
-
     return (
         <section>
             <div className="container">
