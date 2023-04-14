@@ -12,8 +12,6 @@ export default async function LandingPageHero() {
     const data = await response.json()
     const {data: {attributes}} = data
 
-    console.log(attributes)
-
     const props: LandingPageHeroProps = {
         ...attributes,
         image: "http://127.0.0.1:1337" + attributes.image.data.attributes.url
