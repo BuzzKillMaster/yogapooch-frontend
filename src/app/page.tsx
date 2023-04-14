@@ -2,7 +2,7 @@ import PageHeader from "@/components/PageHeader";
 import {Lexend} from "next/font/google";
 import StatisticsSection from "@/app/components/sections/StatisticsSection";
 import PageFooter from "@/components/PageFooter";
-import FeaturesSection from "@/components/sections/FeaturesSection";
+import FeaturesSection from "@/app/components/sections/FeaturesSection";
 import BusinessPartnersSection from "@/components/sections/BusinessPartnersSection";
 import NewsArticlesSection from "@/components/sections/NewsArticlesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
@@ -26,6 +26,7 @@ export default async function Home() {
                 <LandingPageHero/>
                 {/* @ts-expect-error Async Server Component */}
                 <StatisticsSection/>
+                {/* @ts-expect-error Async Server Component */}
                 <FeaturesSection/>
                 <BusinessPartnersSection/>
                 <NewsArticlesSection/>
