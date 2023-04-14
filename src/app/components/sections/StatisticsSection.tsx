@@ -1,10 +1,8 @@
 import SectionHeading from "@/components/sections/partials/SectionHeading";
 import fetchComponentData from "@/utility/fetchComponentData";
+import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 
-type ComponentProps = {
-    heading: string
-    subheading: string
-    description: string
+type ComponentProps = LandingPageSharedProps & {
     image: string
     statistics: {
         statistic: string
