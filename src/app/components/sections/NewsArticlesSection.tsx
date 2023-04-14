@@ -2,6 +2,7 @@ import SectionHeading from "@/components/sections/partials/SectionHeading";
 import Image from "next/image";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 import fetchComponentData from "@/utility/fetchComponentData";
+import enforceCharacterLimit from "@/utility/enforceCharacterLimit";
 
 type ComponentProps = LandingPageSharedProps & {
     articles: {
@@ -33,7 +34,7 @@ export default async function NewsArticlesSection() {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {props.articles.map((article, index) => (
-                        <NewsArticleContainer key={index} imageUrl={article.image} sourceName={article.source} title={article.title} description={article.description} sourceUrl={article.destination}/>
+                        <NewsArticleContainer key={index} imageUrl={article.image} sourceName={article.source} title={article.title} description={enforceCharacterLimit(article.description, 200)} sourceUrl={article.destination}/>
                     ))}
                 </div>
             </div>
