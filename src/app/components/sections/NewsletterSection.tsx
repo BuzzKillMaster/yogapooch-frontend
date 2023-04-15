@@ -5,6 +5,8 @@ import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 
 type ComponentProps = LandingPageSharedProps & {
     image: string
+    placeholder: string
+    buttonText: string
 }
 
 export default async function NewsletterSection() {
@@ -22,8 +24,8 @@ export default async function NewsletterSection() {
                     <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description} fullWidth={true}/>
 
                     <div className={"flex mb-4 shadow-medium"}>
-                        <input type="email" placeholder={"Lorem ipsum dolor sit amet"} className={"bg-alternative p-4 grow"}/>
-                        <button className={"bg-primary text-alternative px-6 font-bold"}>Lorem ipsum</button>
+                        <input type="email" placeholder={props.placeholder} className={"bg-alternative p-4 grow"}/>
+                        <button className={"bg-primary text-alternative px-6 font-bold"}>{props.buttonText}</button>
                     </div>
                 </div>
 
