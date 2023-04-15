@@ -25,7 +25,7 @@ export default async function NewsletterSection() {
 
                     <div className={"flex mb-4 shadow-medium"}>
                         <input type="email" placeholder={props.placeholder} className={"bg-alternative p-4 grow"}/>
-                        <button className={"bg-primary text-alternative px-6 font-bold"}>{props.buttonText}</button>
+                        <button className={"bg-primary text-alternative px-6 font-bold hover:hoverable"}>{props.buttonText}</button>
                     </div>
                 </div>
 

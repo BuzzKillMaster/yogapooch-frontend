@@ -55,11 +55,11 @@ function TeamMemberContainer(props: TeamMember) {
             <p className={"mb-6"}>{props.education}</p>
 
             <div className={"flex items-center gap-4 text-primary"}>
-                <a href={props.linkedin} target={"_blank"} rel={"noreferrer"} className={"text-2xl"}>
+                <a href={props.linkedin} target={"_blank"} rel={"noreferrer"} className={"text-2xl hover:hoverable"}>
                     <FaLinkedin/>
                 </a>
 
-                <a href={"mailto:" + props.email} className={"underline"}>{props.email}</a>
+                <a href={"mailto:" + props.email} className={"underline hover:hoverable"}>{props.email}</a>
             </div>
         </article>
     )

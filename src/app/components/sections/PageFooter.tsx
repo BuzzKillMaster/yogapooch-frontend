@@ -25,11 +25,11 @@ export default async function PageFooter() {
                     <h3 className={"mb-6 text-sm text-secondary font-bold uppercase"}>{props.socialHeading}</h3>
 
                     <div className={"flex gap-4 text-2xl text-primary"}>
-                        <a href={props.linkedin} target={"_blank"} rel={"noreferrer"}>
+                        <a href={props.linkedin} target={"_blank"} rel={"noreferrer"} className={"hover:hoverable"}>
                             <FaLinkedin/>
                         </a>
 
-                        <a href={props.facebook} target={"_blank"} rel={"noreferrer"}>
+                        <a href={props.facebook} target={"_blank"} rel={"noreferrer"} className={"hover:hoverable"}>
                             <FaFacebook/>
                         </a>
                     </div>

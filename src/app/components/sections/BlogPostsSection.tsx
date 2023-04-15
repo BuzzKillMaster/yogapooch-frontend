@@ -58,7 +58,7 @@ function BlogPostContainer(props: Post) {
             
             <p className={"mb-6"}>{props.description}</p>
 
-            <a href={"https://google.com"} target={"_blank"} rel={"noreferrer"} className={"text-primary underline"}>Read more</a>
+            <a href={"https://google.com"} target={"_blank"} rel={"noreferrer"} className={"text-primary underline hover:hoverable"}>Read more</a>
         </article>
     )
 }

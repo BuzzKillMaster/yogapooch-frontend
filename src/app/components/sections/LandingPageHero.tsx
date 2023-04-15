@@ -26,8 +26,8 @@ export default async function LandingPageHero() {
                     <p>{props.description}</p>
 
                     <div className={"mt-12 mb-10"}>
-                        <button className={"bg-primary text-alternative font-bold py-4 px-8 mr-6 shadow-medium"}>{props.leftButtonText}</button>
-                        <button className={"bg-alternative font-bold py-4 px-8 shadow-medium"}>{props.rightButtonText}</button>
+                        <button className={"bg-primary text-alternative font-bold py-4 px-8 mr-6 shadow-medium hover:hoverable"}>{props.leftButtonText}</button>
+                        <button className={"bg-alternative font-bold py-4 px-8 shadow-medium hover:hoverable"}>{props.rightButtonText}</button>
                     </div>
                 </div>
 

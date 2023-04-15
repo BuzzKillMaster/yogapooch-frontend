@@ -51,7 +51,7 @@ function NewsArticleContainer(props: Article) {
             <small className={"text-sm text-secondary font-bold mt-8 inline-block"}>{props.source}</small>
             <h3 className={"text-xl font-bold my-4"}>{props.title}</h3>
             <p className={"mb-6"}>{props.description}</p>
-            <a href={props.destination} target={"_blank"} rel={"noreferrer"} className={"underline text-primary"}>Read more</a>
+            <a href={props.destination} target={"_blank"} rel={"noreferrer"} className={"underline text-primary hover:hoverable"}>Read more</a>
         </article>
     )
 }

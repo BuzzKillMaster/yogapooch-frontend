@@ -59,7 +59,7 @@ export default async function ContactSection() {
 
                         <div className={"bg-secondary h-1 shadow-small my-10"}></div>
 
-                        <button className={"bg-primary text-alternative font-bold py-4 shadow-medium w-full"}>{props.buttonText}</button>
+                        <button className={"bg-primary text-alternative font-bold py-4 shadow-medium w-full hover:hoverable"}>{props.buttonText}</button>
                     </div>
                 </div>
             </div>
