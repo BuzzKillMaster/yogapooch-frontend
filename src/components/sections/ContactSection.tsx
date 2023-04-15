@@ -5,7 +5,7 @@ import {BiCheck} from "react-icons/bi";
 
 export default function ContactSection() {
     return (
-        <section>
+        <section id={"contact"}>
             <div className="container">
                 <SectionHeading smallPrint={"Consectetur adipiscing elit"} title={"Lorem ipsum dolor sit amet"} description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos et exercitationem fugit nesciunt nobis quasi saepe, tempora! Dignissimos eaque error exercitationem fugit in ipsa pariatur quae quasi, ratione repudiandae voluptatibus?"}/>
 

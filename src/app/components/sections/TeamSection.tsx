@@ -31,7 +31,7 @@ export default async function TeamSection() {
     }
 
     return (
-        <section>
+        <section id={"team"}>
             <div className="container">
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 

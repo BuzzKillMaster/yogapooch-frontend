@@ -17,7 +17,7 @@ export default async function StatisticsSection() {
     const props: ComponentProps = attributes
 
     return (
-        <section>
+        <section id={"about"}>
             <div className="container">
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 

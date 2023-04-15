@@ -17,7 +17,7 @@ export default async function LandingPageHero() {
     }
 
     return (
-        <section>
+        <section id={"hero"}>
             <div className="container grid lg:grid-cols-2 items-center gap-20">
                 <div>
                     <small className={"text-sm font-bold uppercase text-secondary"}>{props.subheading}</small>

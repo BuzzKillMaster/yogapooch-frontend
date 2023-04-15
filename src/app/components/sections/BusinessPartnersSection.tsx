@@ -19,7 +19,7 @@ export default async function BusinessPartnersSection() {
 
 
     return (
-        <section>
+        <section id={"partners"}>
             <div className={"container"}>
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 

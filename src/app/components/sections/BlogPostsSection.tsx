@@ -31,7 +31,7 @@ export default async function BlogPostsSection() {
     }
 
     return (
-        <section>
+        <section id={"blog"}>
             <div className="container">
                 <SectionHeading smallPrint={props.subheading} title={props.heading} description={props.description}/>
 
