@@ -1,4 +1,4 @@
-import SectionHeading from "@/components/sections/partials/SectionHeading";
+import SectionHeading from "@/app/components/sections/partials/SectionHeading";
 import {HiThumbUp} from "react-icons/hi";
 import {BiCheck} from "react-icons/bi";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
@@ -28,8 +28,6 @@ type ComponentProps = LandingPageSharedProps & {
 export default async function ContactSection() {
     const {data: {attributes}} = await fetchComponentData("landing-page-contact-section", "populate[boxThingy][populate][benefits]=*&populate[features]=*")
     const props: ComponentProps = attributes
-
-    console.log(props.boxThingy)
 
     return (
         <section id={"contact"}>

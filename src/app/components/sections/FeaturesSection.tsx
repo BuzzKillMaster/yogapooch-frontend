@@ -1,4 +1,4 @@
-import SectionHeading from "@/components/sections/partials/SectionHeading";
+import SectionHeading from "@/app/components/sections/partials/SectionHeading";
 import {HiThumbUp} from "react-icons/hi";
 import fetchComponentData from "@/utility/fetchComponentData";
 

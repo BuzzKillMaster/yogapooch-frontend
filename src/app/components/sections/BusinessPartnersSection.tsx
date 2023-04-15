@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionHeading from "@/components/sections/partials/SectionHeading";
+import SectionHeading from "@/app/components/sections/partials/SectionHeading";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 import fetchComponentData from "@/utility/fetchComponentData";
 

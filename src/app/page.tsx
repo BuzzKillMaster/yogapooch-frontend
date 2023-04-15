@@ -1,4 +1,4 @@
-import PageHeader from "@/components/PageHeader";
+import PageHeader from "@/app/components/sections/PageHeader";
 import {Lexend} from "next/font/google";
 import StatisticsSection from "@/app/components/sections/StatisticsSection";
 import PageFooter from "@/app/components/sections/PageFooter";

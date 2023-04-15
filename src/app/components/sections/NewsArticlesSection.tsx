@@ -1,4 +1,4 @@
-import SectionHeading from "@/components/sections/partials/SectionHeading";
+import SectionHeading from "@/app/components/sections/partials/SectionHeading";
 import Image from "next/image";
 import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 import fetchComponentData from "@/utility/fetchComponentData";
