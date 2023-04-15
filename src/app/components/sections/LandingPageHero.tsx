@@ -4,6 +4,8 @@ import LandingPageSharedProps from "@/types/LandingPageSharedProps";
 
 type ComponentProps = LandingPageSharedProps & {
     image: string
+    rightButtonText: string
+    leftButtonText: string
 }
 
 export default async function LandingPageHero() {
@@ -24,8 +26,8 @@ export default async function LandingPageHero() {
                     <p>{props.description}</p>
 
                     <div className={"mt-12 mb-10"}>
-                        <button className={"bg-primary text-alternative font-bold py-4 px-8 mr-6 shadow-medium"}>Lorem ipsum</button>
-                        <button className={"bg-alternative font-bold py-4 px-8 shadow-medium"}>Dolor sit amet</button>
+                        <button className={"bg-primary text-alternative font-bold py-4 px-8 mr-6 shadow-medium"}>{props.leftButtonText}</button>
+                        <button className={"bg-alternative font-bold py-4 px-8 shadow-medium"}>{props.rightButtonText}</button>
                     </div>
                 </div>
 
