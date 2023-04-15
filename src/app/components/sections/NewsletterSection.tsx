@@ -25,8 +25,6 @@ export default async function NewsletterSection() {
                         <input type="email" placeholder={"Lorem ipsum dolor sit amet"} className={"bg-alternative p-4 grow"}/>
                         <button className={"bg-primary text-alternative px-6 font-bold"}>Lorem ipsum</button>
                     </div>
-
-                    <p>Lorem ipsum dolor sit amet</p>
                 </div>
 
                 <Image src={props.image} alt={""} height={1000} width={1000} className={"hidden lg:block shadow-large aspect-square object-cover"}/>

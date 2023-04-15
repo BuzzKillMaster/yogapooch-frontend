@@ -27,8 +27,6 @@ export default async function LandingPageHero() {
                         <button className={"bg-primary text-alternative font-bold py-4 px-8 mr-6 shadow-medium"}>Lorem ipsum</button>
                         <button className={"bg-alternative font-bold py-4 px-8 shadow-medium"}>Dolor sit amet</button>
                     </div>
-
-                    <p>Lorem ipsum dolor sit amet? <span className={"cursor-pointer text-primary underline"}>Consectetur</span></p>
                 </div>
 
                 <Image src={props.image} alt={""} height={1000} width={1000} className={"hidden lg:block shadow-large aspect-square object-cover"}/>
