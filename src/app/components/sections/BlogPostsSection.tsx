@@ -5,6 +5,7 @@ import fetchComponentData from "@/utility/fetchComponentData";
 import enforceCharacterLimit from "@/utility/enforceCharacterLimit";
 
 type Post = {
+    id: number
     title: string
     description: string
     author: string
@@ -24,6 +25,7 @@ export default async function BlogPostsSection() {
         ...attributes,
         posts: data.map((post: any) => {
            return {
+                id: post.id,
                ...post.attributes,
                 image: process.env.STRAPI_HOST_URL + post.attributes.image.data.attributes.url
            }
@@ -39,8 +41,8 @@ export default async function BlogPostsSection() {
                     <div className={"lg:col-span-3"}>
                         <BlogPostContainer {...props.posts[0]} description={enforceCharacterLimit(props.posts[0].description, 400)}/>
                     </div>
-                    {props.posts.slice(1).map((post, index) => (
-                        <BlogPostContainer key={index} {...post} description={enforceCharacterLimit(post.description, 200)}/>
+                    {props.posts.slice(1).map((post) => (
+                        <BlogPostContainer key={post.id} {...post} description={enforceCharacterLimit(post.description, 200)}/>
                     ))}
                 </div>
             </div>
@@ -58,7 +60,7 @@ function BlogPostContainer(props: Post) {
             
             <p className={"mb-6"}>{props.description}</p>
 
-            <a href={"https://google.com"} target={"_blank"} rel={"noreferrer"} className={"text-primary underline hover:hoverable"}>Read more</a>
+            <a href={"/blog/" + props.id} target={"_blank"} rel={"noreferrer"} className={"text-primary underline hover:hoverable"}>Read more</a>
         </article>
     )
 }
