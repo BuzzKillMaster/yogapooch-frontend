@@ -13,7 +13,7 @@ import LandingPageHero from "@/app/components/sections/LandingPageHero";
 
 export default async function Home() {
     return (
-        <div className={"bg-default text-default"}>
+        <div>
             {/* @ts-expect-error Async Server Component */}
             <PageHeader />
 
