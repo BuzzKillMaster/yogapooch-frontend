@@ -24,7 +24,7 @@ export default async function NewsArticlesSection() {
         articles: attributes.articles.map((article: any) => {
             return {
                 ...article,
-                image: "http://127.0.0.1:1337" + article.image.data.attributes.url
+                image: process.env.STRAPI_HOST_URL + article.image.data.attributes.url
             }
         })
     }

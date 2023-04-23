@@ -13,7 +13,7 @@ export default async function LandingPageHero() {
 
     const props: ComponentProps = {
         ...attributes,
-        image: "http://127.0.0.1:1337" + attributes.image.data.attributes.url
+        image: process.env.STRAPI_HOST_URL + attributes.image.data.attributes.url
     }
 
     return (

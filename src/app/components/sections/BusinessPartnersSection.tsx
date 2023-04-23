@@ -14,7 +14,7 @@ export default async function BusinessPartnersSection() {
 
     const props: ComponentProps = {
         ...attributes,
-        partners: attributes.partners.map((partner: any) => "http://127.0.0.1:1337" + partner.image.data.attributes.url)
+        partners: attributes.partners.map((partner: any) => process.env.STRAPI_HOST_URL + partner.image.data.attributes.url)
     }
 
 

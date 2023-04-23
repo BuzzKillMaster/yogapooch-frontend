@@ -25,7 +25,7 @@ export default async function TeamSection() {
         members: attributes.members.map((member: any) => {
             return {
                 ...member,
-                image: "http://127.0.0.1:1337" + member.image.data.attributes.url
+                image: process.env.STRAPI_HOST_URL + member.image.data.attributes.url
             }
         })
     }

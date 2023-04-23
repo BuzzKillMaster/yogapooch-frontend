@@ -22,7 +22,7 @@ export default async function TestimonialsSection() {
         testimonials: attributes.testimonials.map((testimonial: any) => {
             return {
                 ...testimonial,
-                image: "http://127.0.0.1:1337" + testimonial.image.data.attributes.url
+                image: process.env.STRAPI_HOST_URL + testimonial.image.data.attributes.url
             }
         })
     }

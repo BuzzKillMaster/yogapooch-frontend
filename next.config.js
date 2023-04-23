@@ -5,7 +5,8 @@ const nextConfig = {
         domains: [
             "fakeimg.pl",
             "img.logoipsum.com",
-            "127.0.0.1"
+            "127.0.0.1",
+            "strapi-a0lw.onrender.com",
         ],
     },
     experimental: {
