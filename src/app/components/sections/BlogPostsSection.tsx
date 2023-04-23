@@ -18,7 +18,7 @@ type ComponentProps = LandingPageSharedProps & {
 
 export default async function BlogPostsSection() {
     const {data: {attributes}} = await fetchComponentData("landing-page-blog-posts-section")
-    const {data} = await fetchComponentData("blog-posts", "pagination[limit]=4&populate=*")
+    const {data} = await fetchComponentData("blog-posts", "sort=createdAt:DESC&pagination[limit]=4&populate=*")
 
     const props: ComponentProps = {
         ...attributes,
