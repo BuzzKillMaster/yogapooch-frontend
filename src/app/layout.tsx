@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 import {Lexend} from "next/font/google";
 
 export const metadata = {
-  title: "Hydrovertic",
+  title: "Yogapooch",
 }
 
 const lexend = Lexend({
