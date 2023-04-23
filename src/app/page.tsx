@@ -19,6 +19,7 @@ const lexend = Lexend({
 export default async function Home() {
     return (
         <div className={lexend.className + " bg-default text-default"}>
+            {/* @ts-expect-error Async Server Component */}
             <PageHeader />
 
             <main>
