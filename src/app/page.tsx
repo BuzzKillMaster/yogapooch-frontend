@@ -1,5 +1,4 @@
 import PageHeader from "@/app/components/sections/PageHeader";
-import {Lexend} from "next/font/google";
 import StatisticsSection from "@/app/components/sections/StatisticsSection";
 import PageFooter from "@/app/components/sections/PageFooter";
 import FeaturesSection from "@/app/components/sections/FeaturesSection";
@@ -12,13 +11,9 @@ import NewsletterSection from "@/app/components/sections/NewsletterSection";
 import BlogPostsSection from "@/app/components/sections/BlogPostsSection";
 import LandingPageHero from "@/app/components/sections/LandingPageHero";
 
-const lexend = Lexend({
-    subsets: ["latin"],
-});
-
 export default async function Home() {
     return (
-        <div className={lexend.className + " bg-default text-default"}>
+        <div className={"bg-default text-default"}>
             {/* @ts-expect-error Async Server Component */}
             <PageHeader />
 

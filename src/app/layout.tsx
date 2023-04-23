@@ -1,9 +1,14 @@
 import '@/styles/globals.css'
 import {ReactNode} from "react";
+import {Lexend} from "next/font/google";
 
 export const metadata = {
   title: "Hydrovertic",
 }
+
+const lexend = Lexend({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -12,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={lexend.className}>{children}</body>
     </html>
   )
 }
